@@ -2,7 +2,7 @@ var IMEIplugin = {
      
 }
 
-IMEIplugin.prototype.getIMEI = function(name, successCallback, failureCallback) { 
+IMEIplugin.prototype.getIMEI = function(successCallback, failureCallback) { 
           var platform = device.platform;
     	if(platform == 'Android'){
     	 	return Phonegap.exec( success, fail, 
