@@ -4,7 +4,7 @@ var IMEIplugin = {
     var platform = device.platform;
     	if(platform == 'Android'){
     	 	return cordova.exec( success, fail, 
-                         	  "org.apache.cordova.GSMstock.Imei", 
+                         	  "com.GSMstock.IMEI", 
                          	  "", [resultType]); 
          }  else if(platform == 'BlackBerry'){
              	return blackberry.identity.IMEI;

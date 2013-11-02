@@ -30,14 +30,14 @@
          </config-file>
         
         <config-file target="config.xml" parent="/*">
-            <feature name="org.apache.cordova.GSMstock.Imei">
-                <param name="android-package" value="org.apache.cordova.GSMstock.IMEIplugin" />
+            <feature name="com.GSMstock.IMEI">
+                <param name="android-package" value="com.GSMstock.IMEIplugin" />
             </feature>
         </config-file>
 
         
         <!-- cordova plugin src files -->
-        <source-file src="src/android/IMEIplugin.java" target-dir="src/org/apache/cordova/GSMstock" />
+        <source-file src="src/android/IMEIplugin.java" target-dir="src/com/GSMstock/IMEI" />
         
        
          
