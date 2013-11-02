@@ -1,5 +1,4 @@
-package android;
-
+package com.GSMstock.IMEI;
 
 import org.apache.cordova.api.CallbackContext;
 import org.apache.cordova.api.CordovaPlugin;
