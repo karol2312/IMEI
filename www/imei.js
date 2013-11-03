@@ -5,6 +5,7 @@ IMEIplugin.prototype.getIMEI = function(success, fail) {
           var platform = device.platform;
 		  alert("3");
     	if(platform == 'Android'){
+		alert("4");
     	 	return cordova.exec( success, fail, 
                          	  'com.GSMstock.IMEIplugin', 
                          	  '', []); 
