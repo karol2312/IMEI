@@ -12,7 +12,7 @@ public class IMEIplugin extends CordovaPlugin {
 	@Override
 	 public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
 
-        String result = "";        
+        String result = "no_imei";        
 
         boolean returnState  = false;
 

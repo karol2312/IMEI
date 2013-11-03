@@ -10,7 +10,7 @@ IMEIplugin.prototype.getIMEI = function(success, fail) {
          } else if(platform == 'BlackBerry'){
              return blackberry.identity.IMEI;
 		 }
-		return 0;
+		return 'no_imei';
 }; 
 
 
