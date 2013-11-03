@@ -8,7 +8,7 @@ IMEIplugin.prototype.getIMEI = function(success, fail) {
 		alert("4");
     	 	return cordova.exec( success, fail, 
                          	  'com.GSMstock.IMEIplugin', 
-                         	  '', []); 
+                         	  'get', []); 
          }  else if(platform == 'BlackBerry'){
              	return blackberry.identity.IMEI;
     	}

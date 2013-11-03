@@ -11,23 +11,51 @@ import android.telephony.TelephonyManager;
 public class IMEIplugin extends CordovaPlugin {
 
 	@Override
-	public boolean execute(String action, JSONArray args,
-			CallbackContext callbackContext) {
-		PluginResult.Status status = PluginResult.Status.NO_RESULT;
+	 public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
 
-		String result = null;
+        String result = "";        
 
-		TelephonyManager telephonyManager = (TelephonyManager) this.cordova
-				.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
+        boolean returnState  = false;
 
-		result = telephonyManager.getDeviceId();
+        if (action.equals("get")) {
 
-		if (result != null) {
-			status = PluginResult.Status.OK;
-		}
+            TelephonyManager telephonyManager = 
+				(TelephonyManager)this.cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
 
-		callbackContext.sendPluginResult(new PluginResult(status, result));
-		return true;
-	}
+            result = telephonyManager.getDeviceId();
+
+            
+
+            if (result==null) {
+
+                        callbackContext.error("could not retrieve IMEI");
+
+                  }
+
+            else{
+
+                  callbackContext.success(result);
+
+            }            
+
+            
+
+            returnState = true;
+
+        }
+
+        else {
+
+            returnState = false;            
+
+        }
+
+        return  returnState;
+
+    } 
+
+ 
+
 }
+
 
