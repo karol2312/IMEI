@@ -1,4 +1,4 @@
-var IMEIplugin = { 
+var IMEIplugin = function() { 
      
 };
 
