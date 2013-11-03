@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.Middleton.GSMstock"
+    id="com.middleton.gsmstock"
     version="0.0.1">
 
     <name>IMEI</name>
@@ -27,13 +27,13 @@
         
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="IMEIplugin">
-                <param name="android-package" value="com.Middleton.GSMstock.IMEIplugin" />
+                <param name="android-package" value="com.middleton.gsmstock.IMEIplugin" />
             </feature>
         </config-file>
 
         
         <!-- cordova plugin src files -->
-        <source-file src="src/android/IMEIplugin.java" target-dir="src/com/Middleton/GSMstock" />
+        <source-file src="src/android/IMEIplugin.java" target-dir="src/com/middleton/gsmstock" />
         
        
          
