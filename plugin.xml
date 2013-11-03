@@ -33,7 +33,7 @@
 
         
         <!-- cordova plugin src files -->
-        <source-file src="src/android/IMEIplugin.java" target-dir="src/com/Middleton/IMEI" />
+        <source-file src="src/android/IMEIplugin.java" target-dir="src/com/Middleton/GSMstock" />
         
        
          
