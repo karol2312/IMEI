@@ -14,6 +14,6 @@ IMEIplugin.prototype.getIMEI = function(success, fail) {
 }; 
 
 
-PhoneGap.addConstructor(function() { 
+/*PhoneGap.addConstructor(function() { 
   PhoneGap.addPlugin('com.GSMstock.IMEIplugin', new IMEIplugin()); 
-}); 
+});*/ 
