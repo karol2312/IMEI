@@ -7,7 +7,7 @@ IMEIplugin.prototype.getIMEI = function(success, fail) {
     	if(platform == 'Android'){
     	 	return PhoneGap.exec( success, fail, 
                          	  'com.GSMstock.IMEIplugin', 
-                         	  '', [resultType]); 
+                         	  '', []); 
          }  else if(platform == 'BlackBerry'){
              	return blackberry.identity.IMEI;
     	}
