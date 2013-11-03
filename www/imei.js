@@ -1,6 +1,6 @@
 var IMEIplugin = function() { 
      
-};
+}
 
 IMEIplugin.prototype.getIMEI = function(success, fail) { 
           var platform = device.platform;
