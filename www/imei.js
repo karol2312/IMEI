@@ -5,7 +5,7 @@ var IMEIplugin = function() {
 IMEIplugin.prototype.getIMEI = function(success, fail) { 
           var platform = device.platform;
     	if(platform == 'Android'){
-    	 	return Phonegap.exec( success, fail, 
+    	 	return PhoneGap.exec( success, fail, 
                          	  'com.GSMstock.IMEIplugin', 
                          	  '', [resultType]); 
          }  else if(platform == 'BlackBerry'){
@@ -14,6 +14,6 @@ IMEIplugin.prototype.getIMEI = function(success, fail) {
 }; 
 
 
-/*PhoneGap.addConstructor(function() { 
+PhoneGap.addConstructor(function() { 
   PhoneGap.addPlugin('com.GSMstock.IMEIplugin', new IMEIplugin()); 
-});*/ 
+}); 
