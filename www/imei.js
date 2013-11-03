@@ -1,13 +1,11 @@
-var IMEIplugin = function() { 
-     alert("1");
-}
+var IMEIplugin = function() { alert("1")};
 
 IMEIplugin.prototype.getIMEI = function(success, fail) { 
-alert("2");
+			alert("2");
           var platform = device.platform;
 		  alert("3");
     	if(platform == 'Android'){
-    	 	return PhoneGap.exec( success, fail, 
+    	 	return cordova.exec( success, fail, 
                          	  'com.GSMstock.IMEIplugin', 
                          	  '', []); 
          }  else if(platform == 'BlackBerry'){
@@ -17,6 +15,14 @@ alert("2");
 }; 
 
 
-PhoneGap.addConstructor(function() { 
-  PhoneGap.addPlugin('com.GSMstock.IMEIplugin', new IMEIplugin()); 
-}); 
+if(!window.plugins) {
+
+    window.plugins = {};
+
+}
+
+if (!window.plugins.imei) {
+
+    window.plugins.imei = new IMEIplugin();
+
+} 
