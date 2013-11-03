@@ -14,8 +14,9 @@
     
     <license>Apache 2.0</license>
     
-    <asset src="www/imei.js" target="imei.js" />
-    
+    <js-module src="www/imei.js" name="imei">
+        <clobbers target="imei" />
+    </js-module>
     
     <engines>
       <engine name="cordova" version=">=2.9.0" />
