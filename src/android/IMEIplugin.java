@@ -1,4 +1,4 @@
-package com.GSMstock.IMEI;
+package com.middleton.gsmstock;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
