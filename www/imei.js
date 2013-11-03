@@ -1,29 +1,23 @@
-var IMEIplugin = function() { alert("1")};
+var IMEIplugin = function() {};
 
 IMEIplugin.prototype.getIMEI = function(success, fail) { 
-			alert("2");
-          var platform = device.platform;
-		  alert("3");
-    	if(platform == 'Android'){
-		alert("4");
+        var platform = device.platform;
+    	
+		if(platform == 'Android'){
     	 	return cordova.exec( success, fail, 
                          	  'IMEIplugin', 
                          	  'get', []); 
-         }  else if(platform == 'BlackBerry'){
-             	return blackberry.identity.IMEI;
-    	}
+         } else if(platform == 'BlackBerry'){
+             return blackberry.identity.IMEI;
+		 }
 		return 0;
 }; 
 
 
 if(!window.plugins) {
-
     window.plugins = {};
-
 }
 
 if (!window.plugins.imei) {
-
     window.plugins.imei = new IMEIplugin();
-
 } 
